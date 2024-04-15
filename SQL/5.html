@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a table</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+mysql> create table emp (empid int , empname varchar(20) , dob date, branch varchar(50), slry int );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc emp;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| empid   | int         | YES  |     | NULL    |       |
+| empname | varchar(20) | YES  |     | NULL    |       |
+| dob     | date        | YES  |     | NULL    |       |
+| branch  | varchar(50) | YES  |     | NULL    |       |
+| slry    | int         | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+</pre>
+</body>
+</html>

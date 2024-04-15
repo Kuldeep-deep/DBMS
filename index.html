@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DATABASE MANAGEMENT SYSTEMS</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: ; 
+        }
+
+        .sections {
+            display: flex; 
+            flex-basis: 500px;
+        }
+
+        section {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        #section1 {
+            /* flex-grow: ; */
+            background-color: #4d93a8;
+        }
+
+        #iframe-container {
+            width: 30%; 
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        iframe {
+            width: 100%; 
+            height: 100%; 
+        }
+
+        #section2 {
+            text-align: center;
+            font-size: 21px;
+            width: 10%;
+            border: none;
+            background-color:#4d93a8;
+            margin: 0;
+            float: left;
+            padding: 0%;
+            padding-top: 30px;
+        }
+        #section3 {
+            display: flex;
+            flex-basis: 700px;
+            flex-grow: 1; 
+            border: none; 
+            margin: 0;}
+        .main_hed{
+            background-color: #4d93a8;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .popup-list {
+          
+            position: relative;
+            display: inline-block;
+            background-color: #4d93a8;
+            padding-bottom: 5px;
+        }
+
+        .popup-list-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .popup-list-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .popup-list:hover .popup-list-content {
+            display: block;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline solid;
+            font-size: 40px;
+            background-color: #4d93a8;
+            color: #f9f9f9;
+        }
+        .plc{
+            border-width: 3px;
+            background-color:rgb(53, 141, 182);
+            text-align: left;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="section1">
+            <h1 >DATABASE MANAGEMENT SYSTEMS</h1>
+            
+        </section>
+        <div class="sections">
+            <section id="section2">
+                
+                <div class="popup-list">
+                    <a class="main_hed" href="index.html">Home</a>
+                    <div class="popup-list-content">
+                        
+                        
+                    </div>
+                </div><br>
+                <div class="popup-list">
+                    <a class="main_hed" href="">SQL</a>
+                    <div class="popup-list-content">
+                        <a href="" onclick="changeIframeSrc('')">Database</a>
+                        <a class="plc" href="SQL\1.html" onclick="changeIframeSrc('SQL\1.html')">Check databases</a>
+                        <a class="plc" href="SQL\2.html" onclick="changeIframeSrc('SQL\2.html')">create databse</a>
+                        <a class="plc" href="SQL\3.html" onclick="changeIframeSrc('SQL\3.html')">Drop database</a>
+                        <a class="plc" href="SQL\4.html" onclick="changeIframeSrc('SQL\4.html')">Select database</a>
+                        <a href="" onclick="changeIframeSrc('')">Table</a>
+                        <a class="plc" href="SQL\5.html" onclick="changeIframeSrc('SQL\5.html')">Create table </a>
+                        <a class="plc" href="SQL\6.html" onclick="changeIframeSrc('SQL\6.html')">Tables in database</a>
+                        <a class="plc" href="SQL\7.html" onclick="changeIframeSrc('SQL\7.html')">Rename table</a>
+                        <a class="plc" href="SQL\8.html" onclick="changeIframeSrc('SQL\8.html')">Truncate table</a>
+                        <a class="plc" href="SQL\9.html" onclick="changeIframeSrc('SQL\9.html')">Alter table</a>
+                        <a class="plc" href="SQL\10.html" onclick="changeIframeSrc('SQL\10.html')">Drop table</a>
+                        <a class="plc" href="SQL\11.html" onclick="changeIframeSrc('SQL\11.html')">Insert in table</a>
+                        <a class="plc" href="SQL\12.html" onclick="changeIframeSrc('SQL\12.html')">Delete in table</a>
+                        <a href="" onclick="changeIframeSrc('')">Update</a>
+                        <a class="plc" href="SQL\13.html" onclick="changeIframeSrc('SQL\13.html')">Updating table</a>
+                        <a class="plc" href="SQL\14.html" onclick="changeIframeSrc('SQL\14.html')">updating multiple rows and columns</a>
+                        <a href="" onclick="changeIframeSrc('')">Viewes</a>
+                        <a class="plc" href="SQL\15.html" onclick="changeIframeSrc('SQL\15.html')">Create view</a>
+                        <a class="plc" href="SQL\16.html" onclick="changeIframeSrc('SQL\16.html')">update view</a>
+                        <a class="plc" href="SQL\17.html" onclick="changeIframeSrc('SQL\17.html')">drop  view</a>
+                        <a href="" onclick="changeIframeSrc('')">Operators & Clauses</a>
+                        <a class="plc" href="SQL\18.html" onclick="changeIframeSrc('SQL\18.html')">where clause</a>
+                        <a class="plc" href="SQL\19.html" onclick="changeIframeSrc('SQL\19.html')">order by clause</a>
+                        <a class="plc" href="SQL\20.html" onclick="changeIframeSrc('SQL\20.html')">group by clause</a>
+                        <a class="plc" href="SQL\21.html" onclick="changeIframeSrc('SQL\21.html')">Special operators</a>
+                        <a href="" onclick="changeIframeSrc('')">Keys & constraints</a>
+                        <a class="plc" href="SQL\22.html" onclick="changeIframeSrc('SQL\22.html')">Unique Key</a>
+                        <a class="plc" href="SQL\23.html" onclick="changeIframeSrc('SQL\23.html')">Primary Key</a>
+                        <a class="plc" href="SQL\24.html" onclick="changeIframeSrc('SQL\24.html')">Foreign Key</a>
+                        <a class="plc" href="SQL\25.html" onclick="changeIframeSrc('SQL\25.html')">Default,not null,check</a>
+                        <a href="#" onclick="changeIframeSrc('#')">Joins</a>
+                        <a class="plc" href="SQL\26.html" onclick="changeIframeSrc('SQL\26.html')">Join</a>
+                        <a class="plc" href="SQL\27.html" onclick="changeIframeSrc('SQL\27.html')">Inner Join</a>
+                        <a class="plc" href="SQL\28.html" onclick="changeIframeSrc('SQL\28.html')">Left Join</a>
+                        <a class="plc" href="SQL\29.html" onclick="changeIframeSrc('SQL\29.html')">Right Join</a>
+                        <a class="plc" href="SQL\30.html" onclick="changeIframeSrc('SQL\30.html')">Cross Join</a>
+                        <a class="plc" href="SQL\31.html" onclick="changeIframeSrc('SQL\31.html')">Self Join</a>
+                        <a href="" onclick="changeIframeSrc('')">Functions</a>
+                        <a class="plc" href="SQL\32.html" onclick="changeIframeSrc('SQL\32.html')">Date Functions</a>
+                        <a class="plc" href="SQL\33.html" onclick="changeIframeSrc('SQL\33.html')">String Functions</a>
+                        
+                        
+                        
+                    </div>
+                </div><br>
+                <div class="popup-list">
+                    <a class="main_hed"href="#">PL/SQL</a>
+                    <div class="popup-list-content">
+                        <a class="plc" href="PL_SQL\1.html" onclick="changeIframeSrc('PL_SQL\1.html')">Initializing Variables</a>
+                        <a class="plc" href="PL_SQL\2.html" onclick="changeIframeSrc('PL_SQL\2.html')">Scope</a>
+                        <a class="plc" href="PL_SQL\3.html" onclick="changeIframeSrc('PL_SQL\3.html')">%TYPE</a>
+                        <a class="plc" href="PL_SQL\4.html" onclick="changeIframeSrc('PL_SQL\4.html')">%RAWTYPE</a>
+                        <a href="" onclick="changeIframeSrc('')">Control statements</a>
+                        <a class="plc" href="PL_SQL\5.html" onclick="changeIframeSrc('PL_SQL\5.html')">IF,IF ELSE,IF THEN ELSE</a>
+                        <a class="plc" href="PL_SQL\6.html" onclick="changeIframeSrc('PL_SQL\6.html')">Case statements</a>
+                        <a class="plc" href="PL_SQL\7.html" onclick="changeIframeSrc('PL_SQL\7.html')">exit loop</a>
+                        <a class="plc" href="PL_SQL\8.html" onclick="changeIframeSrc('PL_SQL\8.html')">while loop</a>
+                        <a class="plc" href="PL_SQL\9.html" onclick="changeIframeSrc('PL_SQL\9.html')">For loop</a>
+                        <a class="plc" href="PL_SQL\10.html" onclick="changeIframeSrc('PL_SQL\10.html')">Reverse For loop</a>
+                        <a class="plc" href="PL_SQL\11.html" onclick="changeIframeSrc('PL_SQL\11.html')">continue statement</a>
+                        <a class="plc" href="PL_SQL\12.html" onclick="changeIframeSrc('PL_SQL\12.html')">GOTO statement</a>
+                        <a href="" onclick="changeIframeSrc('')">Procedure</a>
+                        <a class="plc" href="PL_SQL\13.html" onclick="changeIframeSrc('PL_SQL\13.html')">Create procedure</a>
+                        <a class="plc" href="PL_SQL\14.html" onclick="changeIframeSrc('PL_SQL\14.html')">Drop procedure</a>
+                        <a href="" onclick="changeIframeSrc('')">Function</a>
+                        <a class="plc" href="PL_SQL\15.html" onclick="changeIframeSrc('PL_SQL\15.html')">create function</a>
+                        <a href="" onclick="changeIframeSrc('')">Cursors</a>
+                        <a class="plc" href="PL_SQL\16.html" onclick="changeIframeSrc('PL_SQL\16.html')">Implicit Cursors</a>
+                        <a class="plc" href="PL_SQL\17.html" onclick="changeIframeSrc('PL_SQL\17.html')">Explicit cursor</a>
+                        <a href="" onclick="changeIframeSrc('')">Exception Handling</a>
+                        <a class="plc" href="PL_SQL\18.html" onclick="changeIframeSrc('PL_SQL\18.html')">Exeption Handling</a>
+                        <a class="plc" href="PL_SQL\19.html" onclick="changeIframeSrc('PL_SQL\19.html')">Zero devide</a>
+                        <a href="" onclick="changeIframeSrc('')">Triggers</a>
+                        <a class="plc" href="PL_SQL\20.html" onclick="changeIframeSrc('PL_SQL\20.html')">Creating triggers</a>
+
+
+
+                       
+    
+                    </div>
+                </div><br>
+                
+            </section>
+            <section class="sections" id="section3">
+                
+                <iframe src="ds.html"></iframe> 
+            </section>
+        </div>
+        <script>
+        function changeIframeSrc(src) {
+            var iframe = document.querySelector('iframe');
+            iframe.src = src;
+        }
+    </script>
+        <script>
+            const iframe = document.querySelector('iframe');
+            const popupLinks = document.querySelectorAll('.popup-list-content a');
+
+            popupLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const linkSrc = e.target.getAttribute('href');
+                    iframe.src = linkSrc;
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

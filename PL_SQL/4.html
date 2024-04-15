@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a database</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    DECLARE    
+EMPLOYEE EMP. % ROW TYPE;  
+BEGIN     
+EMPLOYEE.EMPNO := 2092;  
+5   EMPLOYEE.ENAME := 'Sanju';  
+Insert into EMP where (EMPNO, ENAME) Values (employee.empno, employee.ename);  
+dbms_output.put_line('Row Inserted');    
+END;  
+    <h1>OUTPUT</h1>
+    Row Inserted
+PL/SQL procedure successfully completed. 
+</pre>
+</body>
+</html>

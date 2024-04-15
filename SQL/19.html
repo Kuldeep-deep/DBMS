@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a database</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    <h1>ORDER BY Clause with ASC</h1>
+    mysql> select * from customers;
+    +----+----------+-----+-----------+----------+
+    | ID | NAME     | AGE | ADDRESS   | SALARY   |
+    +----+----------+-----+-----------+----------+
+    |  1 | Ramesh   |  35 | Ahmedabad | 15000.00 |
+    |  2 | Khilan   |  30 | Delhi     |  4500.00 |
+    |  3 | Kaushik  |  28 | Kota      |  5000.00 |
+    |  4 | Chaitali |  30 | Mumbai    |  9500.00 |
+    |  6 | Komal    |  27 | Pune      |  7500.00 |
+    |  7 | Muffy    |  29 | Indore    | 13000.00 |
+    +----+----------+-----+-----------+----------+
+    6 rows in set (0.00 sec)
+    
+    mysql> SELECT * FROM CUSTOMERS ORDER BY NAME ASC;
+    +----+----------+-----+-----------+----------+
+    | ID | NAME     | AGE | ADDRESS   | SALARY   |
+    +----+----------+-----+-----------+----------+
+    |  4 | Chaitali |  30 | Mumbai    |  9500.00 |
+    |  3 | Kaushik  |  28 | Kota      |  5000.00 |
+    |  2 | Khilan   |  30 | Delhi     |  4500.00 |
+    |  6 | Komal    |  27 | Pune      |  7500.00 |
+    |  7 | Muffy    |  29 | Indore    | 13000.00 |
+    |  1 | Ramesh   |  35 | Ahmedabad | 15000.00 |
+    +----+----------+-----+-----------+----------+
+    6 rows in set (0.01 sec)
+
+    <h1>ORDER BY Clause with DESC</h1>
+    mysql> select * from customers;
++----+----------+-----+-----------+----------+
+| ID | NAME     | AGE | ADDRESS   | SALARY   |
++----+----------+-----+-----------+----------+
+|  1 | Ramesh   |  35 | Ahmedabad | 15000.00 |
+|  2 | Khilan   |  30 | Delhi     |  4500.00 |
+|  3 | Kaushik  |  28 | Kota      |  5000.00 |
+|  4 | Chaitali |  30 | Mumbai    |  9500.00 |
+|  6 | Komal    |  27 | Pune      |  7500.00 |
+|  7 | Muffy    |  29 | Indore    | 13000.00 |
++----+----------+-----+-----------+----------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT * FROM CUSTOMERS ORDER BY NAME DESC;
++----+----------+-----+-----------+----------+
+| ID | NAME     | AGE | ADDRESS   | SALARY   |
++----+----------+-----+-----------+----------+
+|  1 | Ramesh   |  35 | Ahmedabad | 15000.00 |
+|  7 | Muffy    |  29 | Indore    | 13000.00 |
+|  6 | Komal    |  27 | Pune      |  7500.00 |
+|  2 | Khilan   |  30 | Delhi     |  4500.00 |
+|  3 | Kaushik  |  28 | Kota      |  5000.00 |
+|  4 | Chaitali |  30 | Mumbai    |  9500.00 |
++----+----------+-----+-----------+----------+
+6 rows in set (0.00 sec)
+    
+    <h1>ORDER BY Clause on Multiple Columns</h1>
+    mysql> select * from customers;
++----+----------+-----+-----------+----------+
+| ID | NAME     | AGE | ADDRESS   | SALARY   |
++----+----------+-----+-----------+----------+
+|  1 | Ramesh   |  35 | Ahmedabad | 15000.00 |
+|  2 | Khilan   |  30 | Delhi     |  4500.00 |
+|  3 | Kaushik  |  28 | Kota      |  5000.00 |
+|  4 | Chaitali |  30 | Mumbai    |  9500.00 |
+|  6 | Komal    |  27 | Pune      |  7500.00 |
+|  7 | Muffy    |  29 | Indore    | 13000.00 |
++----+----------+-----+-----------+----------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT * FROM CUSTOMERS ORDER BY AGE ASC, SALARY DESC;
++----+----------+-----+-----------+----------+
+| ID | NAME     | AGE | ADDRESS   | SALARY   |
++----+----------+-----+-----------+----------+
+|  6 | Komal    |  27 | Pune      |  7500.00 |
+|  3 | Kaushik  |  28 | Kota      |  5000.00 |
+|  7 | Muffy    |  29 | Indore    | 13000.00 |
+|  4 | Chaitali |  30 | Mumbai    |  9500.00 |
+|  2 | Khilan   |  30 | Delhi     |  4500.00 |
+|  1 | Ramesh   |  35 | Ahmedabad | 15000.00 |
++----+----------+-----+-----------+----------+
+6 rows in set (0.00 sec)
+
+</pre>
+</body>
+</html>

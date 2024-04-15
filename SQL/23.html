@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a database</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    <h1>Creating a Primary Key</h1>
+    mysql> CREATE TABLE CUSTOMERS ( ID INT NOT NULL, NAME VARCHAR (20) NOT NULL, AGE INT NOT NULL, ADDRESS CHAR (25), SALARY DECIMAL (18, 2), PRIMARY KEY (ID) );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> INSERT INTO CUSTOMERS VALUES (3, 'Kaushik', 23, 'Kota', 2000.00);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO CUSTOMERS VALUES (3, 'Chaitali', 25, 'Mumbai', 6500.00);
+ERROR 1062 (23000): Duplicate entry '3' for key 'customers.PRIMARY'
+mysql> INSERT INTO CUSTOMERS VALUES (NULL, 'Komal', 22, 'Hyderabad', 4500.00);
+ERROR 1048 (23000): Column 'ID' cannot be null
+
+<h1>Creating Primary Key on an Existing Column</h1>
+mysql> ALTER TABLE CUSTOMERS ADD CONSTRAINT PRIMARY KEY(NAME);
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+<h1>Dropping Primary Key</h1>
+mysql> ALTER TABLE CUSTOMERS DROP PRIMARY KEY;
+Query OK, 1 row affected (0.05 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a database</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    DECLARE    
+SALARY EMP.SAL % TYPE;  
+ECODE EMP.empno % TYPE;   
+BEGIN     
+Ecode :=&Ecode;  
+Select SAL into SALARY from EMP where EMPNO = ECODE;  
+dbms_output.put_line('Salary of ' || ECODE || 'is = || salary');    
+END;  
+    <h1>OUTPUT</h1>
+    Enter value for ecode: 7499
+Salary of 7499 is = 1600
+PL/SQL procedure successfully completed.  
+</pre>
+</body>
+</html>

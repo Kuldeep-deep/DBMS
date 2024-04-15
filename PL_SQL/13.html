@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a database</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    create or replace procedure "INSERTUSER"    
+(id IN NUMBER,    
+name IN VARCHAR2)    
+is    
+begin    
+insert into user values(id,name);    
+end;    
+/      
+<h1>call procedure</h1>
+BEGIN    
+   insertuser(4309,'Kuldeep');  
+   dbms_output.put_line('record inserted successfully');    
+END;    
+/    
+    <h1>OUTPUT</h1>
+ ID	Name
+4309 Kuldeep
+</pre>
+</body>
+</html>

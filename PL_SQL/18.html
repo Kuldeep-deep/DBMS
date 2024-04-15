@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a database</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    ID	NAME	AGE	ADDRESS	SALARY
+1	Ramesh	23	Allahabad	20000
+2	Suresh	22	Kanpur	22000
+3	Mahesh	24	Ghaziabad	24000
+4	Chandan	25	Noida	26000
+5	Alex	21	Paris	28000
+6	Sunita	20	Delhi	30000
+    DECLARE  
+   c_id customers.id%type := 8;  
+   c_name  customers.name%type;  
+   c_addr customers.address%type;  
+BEGIN  
+   SELECT  name, address INTO  c_name, c_addr  
+   FROM customers  
+   WHERE id = c_id;  
+DBMS_OUTPUT.PUT_LINE ('Name: '||  c_name);  
+ DBMS_OUTPUT.PUT_LINE ('Address: ' || c_addr);  
+EXCEPTION  
+   WHEN no_data_found THEN  
+      dbms_output.put_line('No such customer!');  
+   WHEN others THEN  
+      dbms_output.put_line('Error!');  
+END;  
+/   
+    <h1>OUTPUT</h1>
+    No such customer!
+PL/SQL procedure successfully completed.
+</pre>
+</body>
+</html>

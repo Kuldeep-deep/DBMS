@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a database</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    <h1>Creating Unique Key</h1>
+    mysql> CREATE TABLE CUSTOMERS ( ID INT NOT NULL UNIQUE KEY, NAME VARCHAR(20) NOT NULL, AGE INT NOT NULL, ADDRESS CHAR (25), SALARY DECIMAL (18, 2));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> INSERT INTO CUSTOMERS VALUES (1, 'Ramesh', 32, 'Ahmedabad', 2000.00 ), (1, 'Khilan', 25, 'Delhi', 1500.00 );
+ERROR 1062 (23000): Duplicate entry '1' for key 'customers.ID'
+
+<h1>Multiple Unique Keys</h1>
+mysql> CREATE TABLE BUYERS ( ID INT NOT NULL UNIQUE KEY, NAME VARCHAR(20) NOT NULL UNIQUE KEY, AGE INT NOT NULL, ADDRESS CHAR (25), SALARY DECIMAL (18, 2) );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> INSERT INTO BUYERS VALUES (1, 'Ramesh', 32, 'Ahmedabad', 2000.00 ), (1, 'Rajesh', 25, 'Delhi', 1500.00 );
+ERROR 1062 (23000): Duplicate entry '1' for key 'buyers.ID'
+mysql> INSERT INTO BUYERS VALUES (2, 'Ramesh', 36, 'Chennai', 1700.00 );
+Query OK, 1 row affected (0.01 sec)
+
+<h1>Unique Key on an Existing Column</h1>
+mysql> ALTER TABLE CUSTOMERS ADD CONSTRAINT UNIQUE_ADDRESS UNIQUE(ADDRESS);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+<h1>Dropping an Unique Key</h1>
+mysql> ALTER TABLE CUSTOMERS DROP CONSTRAINT UNIQUE_ADDRESS;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+    
+</pre>
+</body>
+</html>

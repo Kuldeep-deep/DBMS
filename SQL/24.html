@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a database</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    <h1>Foreign Key</h1>
+    mysql> CREATE TABLE CUSTOMERS( ID INT NOT NULL, NAME VARCHAR (20) NOT NULL, AGE INT NOT NULL, ADDRESS CHAR (25) , SALARY DECIMAL (18, 2), PRIMARY KEY (ID) );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> CREATE TABLE ORDERS ( ID INT NOT NULL, DATE DATETIME, CUSTOMER_ID INT, CONSTRAINT FK_CUSTOMER FOREIGN KEY(CUSTOMER_ID) REFERENCES CUSTOMERS(ID), AMOUNT DECIMAL, PRIMARY KEY (ID) );
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> DROP TABLE CUSTOMERS;
+ERROR 3730 (HY000): Cannot drop table 'customers' referenced by a foreign key constraint 'FK_CUSTOMER' on table  
+<h1>Foreign Key Constraint on an Existing Column</h1>
+mysql> ALTER TABLE ORDERS ADD CONSTRAINT FK_ORDERS FOREIGN KEY(ID) REFERENCES CUSTOMERS(ID);
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</pre>
+</body>
+</html>

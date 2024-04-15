@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drop table</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    mysql> show tables;
++-------------------+
+| Tables_in_kuldeep |
++-------------------+
+| customers         |
+| employ            |
++-------------------+
+2 rows in set (0.00 sec)
+
+mysql> drop table customers;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show tables;
++-------------------+
+| Tables_in_kuldeep |
++-------------------+
+| employ            |
++-------------------+
+1 row in set (0.00 sec)
+</pre>
+</body>
+</html>

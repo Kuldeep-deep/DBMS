@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date functions</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    <h1>CURRRENT_TIMESTAMP</h1>
+    mysql> select CURRENT_TIMESTAMP;
++---------------------+
+| CURRENT_TIMESTAMP   |
++---------------------+
+| 2024-04-14 16:53:55 |
++---------------------+
+1 row in set (0.00 sec)
+
+<h1>ADD DATE</h1>
+mysql> SELECT ADDDATE("2017-06-15", INTERVAL 10 DAY);
++----------------------------------------+
+| ADDDATE("2017-06-15", INTERVAL 10 DAY) |
++----------------------------------------+
+| 2017-06-25                             |
++----------------------------------------+
+1 row in set (0.00 sec)
+<h1>ADDTIME</h1>
+mysql> SELECT ADDTIME("2017-06-15 09:34:21", "2");
++-------------------------------------+
+| ADDTIME("2017-06-15 09:34:21", "2") |
++-------------------------------------+
+| 2017-06-15 09:34:23                 |
++-------------------------------------+
+1 row in set (0.00 sec)
+</pre>
+</body>
+</html>

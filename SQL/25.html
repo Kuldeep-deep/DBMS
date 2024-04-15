@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a database</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    <h1>NOT NULL Constraint</h1>
+    mysql> CREATE TABLE CUSTOMERS ( ID INT NOT NULL, NAME VARCHAR (20) NOT NULL, AGE INT NOT NULL, ADDRESS CHAR (25), SALARY DECIMAL (18, 2) );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc customers;
++---------+---------------+------+-----+---------+-------+
+| Field   | Type          | Null | Key | Default | Extra |
++---------+---------------+------+-----+---------+-------+
+| ID      | int           | NO   |     | NULL    |       |
+| NAME    | varchar(20)   | NO   |     | NULL    |       |
+| AGE     | int           | NO   |     | NULL    |       |
+| ADDRESS | char(25)      | YES  |     | NULL    |       |
+| SALARY  | decimal(18,2) | YES  |     | NULL    |       |
++---------+---------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+<h1>DEFAULT Value Constraint</h1>
+mysql> CREATE TABLE CUSTOMERS ( ID INT NOT NULL UNIQUE, NAME VARCHAR (20) DEFAULT 'Not Available', AGE INT NOT NULL, ADDRESS CHAR (25), SALARY DECIMAL (18, 2) );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc customers;
++---------+---------------+------+-----+---------------+-------+
+| Field   | Type          | Null | Key | Default       | Extra |
++---------+---------------+------+-----+---------------+-------+
+| ID      | int           | NO   | PRI | NULL          |       |
+| NAME    | varchar(20)   | YES  |     | Not Available |       |
+| AGE     | int           | NO   |     | NULL          |       |
+| ADDRESS | char(25)      | YES  |     | NULL          |       |
+| SALARY  | decimal(18,2) | YES  |     | NULL          |       |
++---------+---------------+------+-----+---------------+-------+
+5 rows in set (0.00 sec)
+
+<h1>CHECK Value Constraint</h1>
+mysql> CREATE TABLE CUSTOMERS(ID          INT NOT NULL,NAME        VARCHAR (20) NOT NULL,AGE         INT NOT NULL CHECK(AGE>=18),ADDRESS     CHAR (25),SALARY      DECIMAL (18, 2),PRIMARY KEY (ID));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc customers;
++---------+---------------+------+-----+---------+-------+
+| Field   | Type          | Null | Key | Default | Extra |
++---------+---------------+------+-----+---------+-------+
+| ID      | int           | NO   | PRI | NULL    |       |
+| NAME    | varchar(20)   | NO   |     | NULL    |       |
+| AGE     | int           | NO   |     | NULL    |       |
+| ADDRESS | char(25)      | YES  |     | NULL    |       |
+| SALARY  | decimal(18,2) | YES  |     | NULL    |       |
++---------+---------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+</pre>
+</body>
+</html>

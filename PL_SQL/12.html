@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a database</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    DECLARE  
+   a number(2) := 30;  
+BEGIN  
+   <<loopstart>>  
+   -- while loop execution   
+   WHILE a < 50 LOOP  
+      dbms_output.put_line ('value of a: ' || a);  
+      a := a + 1;  
+      IF a = 35 THEN  
+         a := a + 1;  
+         GOTO loopstart;  
+      END IF;  
+   END LOOP;  
+END;  
+/  
+    <h1>OUTPUT</h1>
+    value of a: 30
+value of a: 31
+value of a: 32
+value of a: 33
+value of a: 34
+value of a: 36
+value of a: 37
+value of a: 38
+value of a: 39
+value of a: 40
+value of a: 41
+value of a: 42
+value of a: 43
+value of a: 44
+value of a: 45
+value of a: 46
+value of a: 47
+value of a: 48
+value of a: 49
+
+Statement processed.
+</pre>
+</body>
+</html>

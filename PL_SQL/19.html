@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>creating a database</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    DECLARE
+a int:=10; 
+b int:=0; 
+answer int; 
+
+BEGIN
+answer:=a/b; 
+dbms_output.put_line('the result after division is'||answer); 
+
+exception 
+WHEN zero_divide THEN
+	dbms_output.put_line('dividing by zero please check the values again'); 
+	dbms_output.put_line('the value of a is '||a); 
+	dbms_output.put_line('the value of b is '||b); 
+END; 
+
+    <h1>OUTPUT</h1>
+    dividing by zero please check the values again
+the value of a is 10
+the value of b is 0
+</pre>
+</body>
+</html>
